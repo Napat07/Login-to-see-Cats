@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import axios from 'axios'
 import { Change, AddBear } from '../redux/action'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 const InputForm = props => {
@@ -22,7 +24,7 @@ const InputForm = props => {
     const { data, onChange } = props;
     return (
         <div className='form-container'>
-            <h2>Add bear</h2>
+            <h2>Add cat</h2>
             <table>
                 <tbody>
                     <tr>
@@ -46,14 +48,11 @@ const InputForm = props => {
                     <tr>
                         <td></td>
                         <td>
-
-
-                            <button className='btn' onClick={() => {
+                            <button type="button" class="btn btn-success" onClick={() => {
                                 console.log('test')
                                 obj.AddBear(form)
                             }
-
-                            }>CREATE</button>
+                            }>ADD</button>
                         </td>
                     </tr>
                 </tbody>

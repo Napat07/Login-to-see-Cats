@@ -8,13 +8,12 @@ const url = 'https://passport.psu.ac.th/authentication/authentication.asmx?wsdl'
 const app = express();
 const routes = require('./routes')
 
-// **********************************Facebook************************
 const env = require('dotenv').config()
 
 app.use(cors({ origin: ['http://localhost:3000'], methods: ['GET', 'POST'], credentials: true }));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use('/api', bodyParser.json(), router);   //[use json]
+app.use('/api', bodyParser.json(), router);  
 app.use('/api', bodyParser.urlencoded({ extended: false }), router);
 
 app.use(session({
@@ -23,8 +22,13 @@ app.use(session({
 }))
 
 let bears = [
-   { 'id': 0, 'name': 'pooh', 'weight': 211, 'img': 'https://lumiere-a.akamaihd.net/v1/images/c94eed56a5e84479a2939c9172434567c0147d4f.jpeg?region=0,0,600,600' },
-   { 'id': 1, 'name': 'vinnie', 'weight': 111, 'img': 'https://cdn2.mhpbooks.com/2018/07/winnie_pooh_PNG37592.png' }
+   { 'id': 0, 'name': 'Cat', 'weight': 007, 'img': 'https://i.pinimg.com/736x/60/d9/26/60d9269a5ada1ee5e2f5161d036209e5.jpg' },
+    { 'id': 1, 'name': 'Catcat', 'weight': 111, 'img': 'https://i.pinimg.com/originals/f3/bd/84/f3bd8497e15399201b634714ec5ed390.jpg' },
+    { 'id': 2, 'name': 'Cat3', 'weight': 213, 'img': 'https://i.imgur.com/gdWIxn2.jpg' },
+    { 'id': 3, 'name': 'Cat4', 'weight': 652, 'img': 'https://lh3.googleusercontent.com/ObdbSatQvNUymufVs3vL5YmhGdvs3w5vvTciaGLFQOZoREVAEIIueioFOrWk9je_fqxR' },
+    { 'id': 4, 'name': 'Cat5', 'weight': 43, 'img': 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?ixlib=rb-1.2.1&w=1000&q=80' },
+    { 'id': 5, 'name': 'Cat6', 'weight': 34, 'img': 'https://fsb.zobj.net/crop.php?r=DIRnAiiiyJkFkfpMsvWknlEIXkuYLfYvI-s3DG3Afrdgn54EWiIqaNqyjomP1mJo8-iAIaZo8J6kdNhqsDwLm8b90xiYYxYOirvHOlW-SCHgqgsNsidIfDxCmtJjgK5LfIQkKEU3uxI1Yv1H' }
+
 ];
 
 router.route('/bears')
@@ -111,7 +115,7 @@ app.post('/psupassport', (req, res) => {
                if (response.GetStaffDetailsResult.string[0]) {
                   req.session.access_token = '123'
                   req.session.expires = 60000
-                  res.redirect("http://localhost:3000/#catcute")
+                  res.redirect("http://localhost:3000/#cat")
                } else {
                   res.redirect("http://localhost:80")
                }

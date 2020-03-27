@@ -21,7 +21,7 @@ const BearList = () => {
     }, [])
 
     if (!bears || !bears.length)
-        return (<h2>No bears</h2>)
+        return (<h2>No cats</h2>)
     const a =
         { b1: '5', b2: 'kuy' }
     return (

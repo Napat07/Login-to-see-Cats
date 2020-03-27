@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import BearList from './components/BearList'
 import InputForm from './components/InputForm';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 export default () => {
   const CheckToken = async () => {
@@ -16,9 +18,10 @@ export default () => {
 
   return (
     <div>
-      <h2>Bears</h2>
-      <BearList />
       <InputForm />
+      <h2>-----------------------------</h2>
+      <h2>Cats</h2>
+      <BearList />
     </div>
   )
 }
