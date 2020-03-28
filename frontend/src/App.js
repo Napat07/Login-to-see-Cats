@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import BearList from './components/BearList'
 import InputForm from './components/InputForm';
 import axios from 'axios';
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -17,11 +18,13 @@ export default () => {
   }, [])
 
   return (
-    <div>
+    <div class="bg">
+      <div class = 'bg2'>
       <InputForm />
       <h2>-----------------------------</h2>
       <h2>Cats</h2>
       <BearList />
+      </div>
     </div>
   )
 }

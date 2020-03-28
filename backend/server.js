@@ -27,8 +27,10 @@ let bears = [
     { 'id': 2, 'name': 'Cat3', 'weight': 213, 'img': 'https://i.imgur.com/gdWIxn2.jpg' },
     { 'id': 3, 'name': 'Cat4', 'weight': 652, 'img': 'https://lh3.googleusercontent.com/ObdbSatQvNUymufVs3vL5YmhGdvs3w5vvTciaGLFQOZoREVAEIIueioFOrWk9je_fqxR' },
     { 'id': 4, 'name': 'Cat5', 'weight': 43, 'img': 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?ixlib=rb-1.2.1&w=1000&q=80' },
-    { 'id': 5, 'name': 'Cat6', 'weight': 34, 'img': 'https://fsb.zobj.net/crop.php?r=DIRnAiiiyJkFkfpMsvWknlEIXkuYLfYvI-s3DG3Afrdgn54EWiIqaNqyjomP1mJo8-iAIaZo8J6kdNhqsDwLm8b90xiYYxYOirvHOlW-SCHgqgsNsidIfDxCmtJjgK5LfIQkKEU3uxI1Yv1H' }
-
+    { 'id': 5, 'name': 'Cat6', 'weight': 34, 'img': 'https://fsb.zobj.net/crop.php?r=DIRnAiiiyJkFkfpMsvWknlEIXkuYLfYvI-s3DG3Afrdgn54EWiIqaNqyjomP1mJo8-iAIaZo8J6kdNhqsDwLm8b90xiYYxYOirvHOlW-SCHgqgsNsidIfDxCmtJjgK5LfIQkKEU3uxI1Yv1H' },
+    { 'id': 6, 'name': 'Cat', 'weight': 007, 'img': 'https://i.pinimg.com/736x/60/d9/26/60d9269a5ada1ee5e2f5161d036209e5.jpg' },
+    { 'id': 7, 'name': 'Catcat', 'weight': 111, 'img': 'https://i.pinimg.com/originals/f3/bd/84/f3bd8497e15399201b634714ec5ed390.jpg' }
+   
 ];
 
 router.route('/bears')
