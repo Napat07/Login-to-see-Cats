@@ -51,7 +51,7 @@ router.route('/bears/:bear_id')
    .get((req, res) => {
       let id = req.params.bear_id
       let index = bears.findIndex(bear => (bear.id === +id))
-      res.json(bears[index])                   // get a bear
+      res.json(bears[index])                  
    })
    .put((req, res) => {                               // Update a bear
       let id = req.params.bear_id
@@ -128,7 +128,7 @@ app.post('/psupassport', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-   if (req.session.access_token)
+ if (req.session.access_token)
       return res.sendStatus(200)
    res.sendStatus(401)
 })
