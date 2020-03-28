@@ -21,7 +21,7 @@ exports.index = function (req, res) {
     if (req.session)
         accessToken = req.session.access_token;
     if (!accessToken) {
-        res.send('<img src="https://www.facebook.com/images/fb_icon_325x325.png" width="120" height="120"/> <br/> <br/> Click to: <a href=' + getFacebookLoginUrl() + '> Login Facebook</a> <h1>--------------------------</h1> <img src="https://www.computing.psu.ac.th/th/wp-content/uploads/2018/03/Logo-PSU-TH-01.png" width="250" height="170"/> <br/> Click to: <a href="http://localhost:80/psupassport"> Login PSU</a> <h1>--------------------------</h1>')
+        res.send('<img src="https://www.facebook.com/images/fb_icon_325x325.png" width="120" height="120"/> <br/> <br/> <a href=' + getFacebookLoginUrl() + '> Login Facebook</a> <h1>--------------------------</h1> <img src="https://www.computing.psu.ac.th/th/wp-content/uploads/2018/03/Logo-PSU-TH-01.png" width="250" height="170"/> <br/> <a href="http://localhost:80/psupassport"> Login PSU</a> <h1>--------------------------</h1>')
     }
 };
 
